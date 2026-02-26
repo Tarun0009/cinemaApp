@@ -1,0 +1,48 @@
+{
+  "cli": {
+    "version": ">= 15.0.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_TMDB_API_KEY": "e33bade4c79ad8b783555152363f9915",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://gzslrgtwwfklvqviyhwe.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6c2xyZ3R3d2ZrbHZxdml5aHdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwMDYxMjMsImV4cCI6MjA4MDU4MjEyM30.-0hQN4r3fXR3nKg8vN2owAYa8n6CJc6t97VTkwqaD4Q",
+        "EXPO_PUBLIC_GEMINI_API_KEY": "AIzaSyDjfosk8-R8BknVnaxa94rnIjuWRECG7gg"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_TMDB_API_KEY": "e33bade4c79ad8b783555152363f9915",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://gzslrgtwwfklvqviyhwe.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6c2xyZ3R3d2ZrbHZxdml5aHdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwMDYxMjMsImV4cCI6MjA4MDU4MjEyM30.-0hQN4r3fXR3nKg8vN2owAYa8n6CJc6t97VTkwqaD4Q",
+        "EXPO_PUBLIC_GEMINI_API_KEY": "AIzaSyDjfosk8-R8BknVnaxa94rnIjuWRECG7gg"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./google-services.json",
+        "track": "internal"
+      }
+    }
+  }
+}
